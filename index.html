@@ -9,23 +9,28 @@
 </head>
 <body class="min-h-screen bg-gradient-to-br from-red-50 via-white to-red-100 font-sans text-stone-800 flex flex-col justify-between">
 
-    <header class="bg-gradient-to-r from-red-700 via-red-500 to-red-300 text-white py-8 px-6 shadow-md text-center">
-        <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight drop-shadow-md">Volvemos a Construir Juntos</h1>
-        <p class="text-sm md:text-base text-red-50 mt-1">Educación y resiliencia frente a la crisis social en Colombia</p>
-        <div id="indicadorPaso" class="mt-3 inline-block bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm font-semibold tracking-wide">
-            Paso 1 de 6
+    <header class="bg-gradient-to-r from-red-700 via-red-500 to-red-300 text-white py-6 px-6 shadow-md text-center">
+        <div class="max-w-3xl mx-auto flex flex-col items-center justify-center space-y-3">
+            <img src="imagen.jpg" alt="Logo Universidad" class="max-h-24 object-contain rounded-xl shadow-md bg-white/10 p-2 fallback-icon" onerror="this.style.display='none'; document.getElementById('icon-fallback').style.display='block';">
+            <i id="icon-fallback" data-lucide="graduation-cap" class="w-12 h-12 text-white" style="display: none;"></i>
+            
+            <div>
+                <h1 class="text-xl md:text-2xl font-extrabold tracking-tight drop-shadow-md">Volvemos a Construir Juntos</h1>
+                <p class="text-xs md:text-sm text-red-50 mt-1">Educación y resiliencia frente a la crisis social en Colombia</p>
+            </div>
+            
+            <div id="indicadorPaso" class="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold tracking-wide">
+                Paso 1 de 6
+            </div>
         </div>
     </header>
 
-    <main class="max-w-3xl mx-auto px-6 py-10 w-full flex-grow flex items-center justify-center">
+    <main class="max-w-3xl mx-auto px-6 py-8 w-full flex-grow flex items-center justify-center">
         
         <div class="seccion-paso w-full text-center space-y-6 bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border border-red-100">
-            <img src="imagen.jpg" alt="Logo Universidad" class="mx-auto max-h-40 object-contain rounded-xl shadow-lg bg-white/10 p-2 fallback-icon" onerror="this.style.display='none'; document.getElementById('icon-fallback').style.display='block';">
-            <i id="icon-fallback" data-lucide="graduation-cap" class="w-20 h-20 mx-auto text-red-600" style="display: none;"></i>
-            
             <h2 class="text-3xl font-extrabold text-red-900">Bienvenido/a de regreso</h2>
             <p class="text-lg text-stone-700 leading-relaxed max-w-xl mx-auto">
-                Tu bienestar es nuestra prioridad en este momento de recuperación para Colombia. Te invitamos a recorrer este espacio paso a paso.
+                Tu bienestar es nuestra prioridad en este momento de recuperación para Colombia. Te invitamos a recorrer este espacio paso a paso utilizando los botones inferiores.
             </p>
         </div>
 
