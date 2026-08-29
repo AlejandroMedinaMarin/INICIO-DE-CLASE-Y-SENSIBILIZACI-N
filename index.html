@@ -7,121 +7,166 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-red-50 via-white to-red-100 font-sans text-stone-800">
+<body class="min-h-screen bg-gradient-to-br from-red-50 via-white to-red-100 font-sans text-stone-800 flex flex-col justify-between">
 
-    <header class="bg-gradient-to-r from-red-700 via-red-500 to-red-300 text-white py-16 px-6 shadow-md relative overflow-hidden">
-        <div class="max-w-4xl mx-auto relative z-10 text-center">
-            <img src="imagen.png" alt="Logo Universidad" class="mx-auto mb-6 max-h-32 object-contain rounded-xl shadow-lg bg-white/10 p-2 backdrop-blur-sm fallback-icon" onerror="this.style.display='none'; document.getElementById('icon-fallback').style.display='block';">
-            <i id="icon-fallback" data-lucide="graduation-cap" class="w-16 h-16 mx-auto mb-4 text-red-100" style="display: none;"></i>
-            
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-md">Volvemos a Construir Juntos</h1>
-            <p class="text-xl md:text-2xl font-light text-red-50 max-w-2xl mx-auto drop-shadow-sm">Bienvenido/a de regreso a tu universidad. Tu bienestar es nuestra prioridad en este momento de recuperación.</p>
+    <header class="bg-gradient-to-r from-red-700 via-red-500 to-red-300 text-white py-8 px-6 shadow-md text-center">
+        <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight drop-shadow-md">Volvemos a Construir Juntos</h1>
+        <p class="text-sm md:text-base text-red-50 mt-1">Educación y resiliencia frente a la crisis social en Colombia</p>
+        <div id="indicadorPaso" class="mt-3 inline-block bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm font-semibold tracking-wide">
+            Paso 1 de 6
         </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+    <main class="max-w-3xl mx-auto px-6 py-10 w-full flex-grow flex items-center justify-center">
         
-        <section class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border-l-8 border-red-500 p-8 md:p-10">
-            <div class="flex items-center gap-3 mb-6">
-                <i data-lucide="map-pin" class="text-red-600 w-8 h-8"></i>
-                <h2 class="text-3xl font-bold text-red-900">Nuestro Contexto</h2>
-            </div>
-            <div class="space-y-4 text-lg leading-relaxed text-stone-700">
-                <p>Colombia, por su ubicación geográfica, es un país de gran riqueza natural pero también de alta vulnerabilidad sísmica. El reciente terremoto ha dejado profundas huellas en nuestra infraestructura, nuestra sociedad y en la cotidianidad de nuestras vidas.</p>
-                <p>Históricamente, eventos como los de Popayán (1983) o el Eje Cafetero (1999) nos han enseñado que la verdadera fuerza de nuestro país no reside en el cemento, sino en la <strong>solidaridad, la organización comunitaria y la resiliencia</strong> de su gente.</p>
-                <p>La educación no es ajena a esta crisis. Sin embargo, las aulas representan un refugio, un espacio de normalidad y el cimiento sobre el cual reconstruiremos nuestro futuro. Regresar a clases no es solo un acto académico, sino un paso valiente hacia la recuperación social.</p>
-            </div>
-        </section>
-
-        <section>
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold text-red-900 mb-4">Gestión y Comprensión Emocional</h2>
-                <p class="text-lg text-stone-600">Te invitamos a hacer una pausa y reflexionar sobre estas preguntas orientadoras para identificar cómo te sientes hoy.</p>
-            </div>
+        <div class="seccion-paso w-full text-center space-y-6 bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border border-red-100">
+            <img src="imagen.jpg" alt="Logo Universidad" class="mx-auto max-h-40 object-contain rounded-xl shadow-lg bg-white/10 p-2 fallback-icon" onerror="this.style.display='none'; document.getElementById('icon-fallback').style.display='block';">
+            <i id="icon-fallback" data-lucide="graduation-cap" class="w-20 h-20 mx-auto text-red-600" style="display: none;"></i>
             
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-red-100 shadow-sm">
-                    <div class="mb-4 bg-red-50 w-14 h-14 rounded-full flex items-center justify-center">
-                        <i data-lucide="heart-pulse" class="text-red-600 w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-red-900 mb-3">Reconocimiento</h3>
-                    <p class="text-stone-700">¿Qué emociones has notado que predominan en ti (miedo, ansiedad, esperanza) al pensar en el regreso a clases?</p>
-                </div>
-                <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-red-100 shadow-sm">
-                    <div class="mb-4 bg-red-50 w-14 h-14 rounded-full flex items-center justify-center">
-                        <i data-lucide="users" class="text-red-500 w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-red-900 mb-3">Red de Apoyo</h3>
-                    <p class="text-stone-700">¿Con qué personas, familiares o recursos de la universidad cuentas para hablar abiertamente de lo que sientes?</p>
-                </div>
-                <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-red-100 shadow-sm">
-                    <div class="mb-4 bg-red-50 w-14 h-14 rounded-full flex items-center justify-center">
-                        <i data-lucide="sun" class="text-red-400 w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-red-900 mb-3">Gestión</h3>
-                    <p class="text-stone-700">¿Qué pequeña acción diaria te ha ayudado a sentirte más seguro/a y en calma durante estos últimos días?</p>
-                </div>
-            </div>
-        </section>
+            <h2 class="text-3xl font-extrabold text-red-900">Bienvenido/a de regreso</h2>
+            <p class="text-lg text-stone-700 leading-relaxed max-w-xl mx-auto">
+                Tu bienestar es nuestra prioridad en este momento de recuperación para Colombia. Te invitamos a recorrer este espacio paso a paso.
+            </p>
+        </div>
 
-        <section class="bg-white rounded-3xl shadow-xl overflow-hidden text-center border-t-8 border-red-600" id="encuesta">
-            <div class="p-10 md:p-14 space-y-6">
-                <i data-lucide="clipboard-list" class="w-20 h-20 text-red-600 mx-auto"></i>
-                <h2 class="text-3xl md:text-4xl font-bold text-stone-800">Encuesta de Caracterización</h2>
-                <p class="text-lg text-stone-600 max-w-2xl mx-auto pb-6">
-                    Tu respuesta es vital para nosotros. Por favor, diligencia el formulario oficial de la Universidad para conocer tu estado actual y poder brindarte el apoyo estructural y académico necesario.
+        <div class="seccion-paso hidden w-full space-y-6 bg-white/90 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border-l-8 border-red-600">
+            <div class="flex items-center gap-3 text-red-700 mb-2">
+                <i data-lucide="user" class="w-8 h-8"></i>
+                <h2 class="text-2xl font-bold">El Profesor</h2>
+            </div>
+            <div class="space-y-4 text-stone-700 leading-relaxed text-lg">
+                <p><strong class="text-stone-900">Alejandro Medina Marín</strong></p>
+                <p>Trabajador Social, Universidad del Valle. Magíster en Ciencias Sociales, Universidad de Caldas. Docente hora cátedra de la Universidad del Valle, Sistema de regionalización.</p>
+                <p class="text-sm bg-red-50 p-4 rounded-xl border border-red-100 text-stone-600">
+                    Investigador en áreas relacionadas con educación, administración educativa y gestión emocional en entornos educativos. Columnista de opinión en el periódico El Expreso de Pereira.
                 </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeaWcuRxtL-bziLcEIJrEzniNX1H0HBNvvhl5ZgoveOxVfdoA/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-3 bg-red-600 hover:bg-red-700 text-white text-xl font-bold py-5 px-10 rounded-full shadow-lg transition-all transform hover:-translate-y-1 w-full md:w-auto">
-                    Ir al Formulario Oficial
-                    <i data-lucide="external-link" class="w-6 h-6"></i>
-                </a>
             </div>
-        </section>
+        </div>
 
-        <section class="bg-red-50 rounded-2xl p-8 md:p-12 border border-red-200 shadow-inner">
-            <div class="mb-8">
-                <h2 class="text-3xl font-bold text-red-900 mb-4 flex items-center gap-3">
-                    <i data-lucide="leaf" class="text-green-600 w-8 h-8"></i>
+        <div class="seccion-paso hidden w-full space-y-6 bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border-l-8 border-red-500">
+            <div class="flex items-center gap-3 text-red-600">
+                <i data-lucide="map-pin" class="w-8 h-8"></i>
+                <h2 class="text-2xl font-bold text-red-900">Nuestro Contexto Histórico</h2>
+            </div>
+            <div class="space-y-4 text-base md:text-lg leading-relaxed text-stone-700">
+                <p>Colombia es un país de gran riqueza natural pero de alta vulnerabilidad sísmica. El reciente terremoto ha dejado profundas huellas en nuestra infraestructura y cotidianidad.</p>
+                <p>Eventos históricos como los de Popayán (1983) o el Eje Cafetero (1999) nos enseñan que nuestra verdadera fuerza reside en la <strong>solidaridad y la resiliencia</strong>.</p>
+                <p>Regresar a clases no es solo un acto académico, sino un paso valiente hacia la recuperación social.</p>
+            </div>
+        </div>
+
+        <div class="seccion-paso hidden w-full space-y-6 bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border border-red-100">
+            <div class="text-center mb-4">
+                <h2 class="text-2xl font-bold text-red-900">Gestión y Comprensión Emocional</h2>
+                <p class="text-sm text-stone-600">Reflexiona sobre estas preguntas antes de continuar:</p>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-red-50 p-4 rounded-xl border border-red-100">
+                    <h3 class="font-bold text-red-900 flex items-center gap-2"><i data-lucide="heart-pulse" class="w-5 h-5 text-red-600"></i> Reconocimiento</h3>
+                    <p class="text-stone-700 text-sm mt-1">¿Qué emociones predominan en ti (miedo, ansiedad, esperanza) al pensar en el regreso?</p>
+                </div>
+                <div class="bg-red-50 p-4 rounded-xl border border-red-100">
+                    <h3 class="font-bold text-red-900 flex items-center gap-2"><i data-lucide="users" class="w-5 h-5 text-red-500"></i> Red de Apoyo</h3>
+                    <p class="text-stone-700 text-sm mt-1">¿Con qué personas o recursos de la universidad cuentas para hablar de lo que sientes?</p>
+                </div>
+                <div class="bg-red-50 p-4 rounded-xl border border-red-100">
+                    <h3 class="font-bold text-red-900 flex items-center gap-2"><i data-lucide="sun" class="w-5 h-5 text-amber-500"></i> Gestión</h3>
+                    <p class="text-stone-700 text-sm mt-1">¿Qué pequeña acción diaria te ha ayudado a sentirte más seguro/a en estos días?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="seccion-paso hidden w-full text-center space-y-6 bg-white p-8 md:p-12 rounded-3xl shadow-xl border-t-8 border-red-600">
+            <i data-lucide="clipboard-list" class="w-16 h-16 text-red-600 mx-auto"></i>
+            <h2 class="text-2xl md:text-3xl font-bold text-stone-800">Encuesta de Caracterización</h2>
+            <p class="text-stone-600 max-w-lg mx-auto">
+                Tu respuesta es vital. Por favor, diligencia el formulario oficial de la Universidad para conocer tu estado actual y brindarte apoyo.
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeaWcuRxtL-bziLcEIJrEzniNX1H0HBNvvhl5ZgoveOxVfdoA/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-lg font-bold py-4 px-8 rounded-full shadow-lg transition-all">
+                Ir al Formulario Oficial
+                <i data-lucide="external-link" class="w-5 h-5"></i>
+            </a>
+        </div>
+
+        <div class="seccion-paso hidden w-full space-y-6 bg-red-50 p-6 md:p-10 rounded-3xl shadow-xl border border-red-200">
+            <div>
+                <h2 class="text-2xl font-bold text-red-900 flex items-center gap-2">
+                    <i data-lucide="leaf" class="text-green-600 w-7 h-7"></i>
                     Ejercicio de Cierre: Resiliencia Activa
                 </h2>
-                <p class="text-lg text-stone-700 italic">
-                    “Para cerrar este espacio de hoy, les invito a hacer una pequeña pausa de un minuto. No necesitan cerrar los ojos si no se sienten cómodos; solo dejen caer su mirada en un punto fijo en el suelo frente a ustedes.”
+                <p class="text-sm text-stone-700 italic mt-2">
+                    “Para cerrar este espacio, haz una pausa de un minuto. Deja caer tu mirada en un punto fijo en el suelo frente a ti.”
                 </p>
             </div>
-
-            <div class="space-y-6">
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <h3 class="text-xl font-bold text-red-800 mb-2">1. El anclaje físico</h3>
-                    <p class="text-stone-700 leading-relaxed">
-                        “Sientan el peso de sus cuerpos en la silla. Coloquen ambos pies completamente planos sobre el piso. Sientan el contacto firme de sus zapatos o sus pies con el suelo. Imaginen, al igual que el bambú de nuestra historia, que de las plantas de sus pies nacen raíces profundas que bajan y se aferran con total seguridad a la tierra. El suelo que nos sostiene es firme aquí y ahora”.
-                    </p>
+            <div class="space-y-3 text-sm text-stone-700">
+                <div class="bg-white p-3 rounded-lg shadow-sm">
+                    <strong>1. Anclaje físico:</strong> Siente el peso de tus cuerpos en la silla y tus pies firmes en el piso, imaginando raíces profundas que se aferran a la tierra segura.
                 </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <h3 class="text-xl font-bold text-red-800 mb-2">2. La respiración flexible</h3>
-                    <p class="text-stone-700 leading-relaxed">
-                        “Vamos a respirar juntos para flexibilizar la estructura. Inhalen profundamente por la nariz durante 4 segundos… sientan el aire entrar (1, 2, 3, 4). Sostengan el aire un momento (1, 2). Ahora, exhalen suavemente por la boca, como si soplaran una vela, durante 6 segundos… dejen ir toda la tensión acumulada (1, 2, 3, 4, 5, 6)”. <br><span class="text-sm text-stone-500 mt-2 block">(Repite este ciclo de respiración una vez más)</span>
-                    </p>
+                <div class="bg-white p-3 rounded-lg shadow-sm">
+                    <strong>2. Respiración flexible:</strong> Inhala por la nariz (4 seg), sostén (2 seg) y exhala suavemente por la boca como soplando una vela (6 seg).
                 </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-sm">
-                    <h3 class="text-xl font-bold text-red-800 mb-2">3. El compromiso en el presente</h3>
-                    <p class="text-stone-700 leading-relaxed">
-                        “Manteniendo esa respiración tranquila, repitan mentalmente este compromiso consigo mismos: <strong class="text-red-700">‘Acepto mis grietas, fortalezco mis raíces y elijo avanzar paso a paso’</strong>. Muevan lentamente los dedos de las manos, los dedos de los pies, y cuando estén listos, regresen su mirada aquí al frente”.
-                    </p>
+                <div class="bg-white p-3 rounded-lg shadow-sm">
+                    <strong>3. Compromiso:</strong> Repite mentalmente: <em>“Acepto mis grietas, fortalezco mis raíces y elijo avanzar paso a paso”</em>.
                 </div>
             </div>
-        </section>
+        </div>
 
     </main>
 
-    <footer class="bg-red-950 text-stone-300 py-16 px-6 mt-12 border-t-8 border-red-500 text-center">
-        <h2 class="text-3xl md:text-4xl font-serif text-white italic">"Las grietas en las paredes no alcanzarán nuestros sueños."</h2>
-        <p class="text-xl font-light max-w-2xl mx-auto mt-4">Juntos por una educación resiliente en Colombia.</p>
-    </footer>
+    <nav class="bg-white border-t border-red-100 py-4 px-6 shadow-lg">
+        <div class="max-w-3xl mx-auto flex justify-between items-center">
+            <button id="btnAnterior" onclick="cambiarPaso(-1)" class="flex items-center gap-2 bg-stone-200 hover:bg-stone-300 text-stone-800 font-bold py-3 px-6 rounded-full transition-all disabled:opacity-30 disabled:cursor-not-allowed">
+                <i data-lucide="arrow-left" class="w-5 h-5"></i> Anterior
+            </button>
+            <button id="btnSiguiente" onclick="cambiarPaso(1)" class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-md transition-all">
+                Siguiente <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </button>
+        </div>
+    </nav>
 
     <script>
         lucide.createIcons();
+
+        let pasoActual = 0;
+        const pasos = document.querySelectorAll('.seccion-paso');
+        const totalPasos = pasos.length;
+        const btnAnterior = document.getElementById('btnAnterior');
+        const btnSiguiente = document.getElementById('btnSiguiente');
+        const indicadorPaso = document.getElementById('indicadorPaso');
+
+        function actualizarVista() {
+            pasos.forEach((paso, index) => {
+                if (index === pasoActual) {
+                    paso.classList.remove('hidden');
+                } else {
+                    paso.classList.add('hidden');
+                }
+            });
+
+            indicadorPaso.textContent = `Paso ${pasoActual + 1} de ${totalPasos}`;
+            btnAnterior.disabled = pasoActual === 0;
+            
+            if (pasoActual === totalPasos - 1) {
+                btnSiguiente.innerHTML = '¡Finalizar! <i data-lucide="check" class="w-5 h-5"></i>';
+            } else {
+                btnSiguiente.innerHTML = 'Siguiente <i data-lucide="arrow-right" class="w-5 h-5"></i>';
+            }
+            lucide.createIcons();
+        }
+
+        function cambiarPaso(direccion) {
+            pasoActual += direccion;
+            if (pasoActual < 0) {
+                pasoActual = 0;
+            } else if (pasoActual >= totalPasos) {
+                pasoActual = 0; // Vuelve al inicio si llega al final
+            }
+            actualizarVista();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Inicializar
+        actualizarVista();
     </script>
 </body>
 </html>
