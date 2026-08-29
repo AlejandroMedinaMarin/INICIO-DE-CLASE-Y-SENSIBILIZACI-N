@@ -11,7 +11,9 @@
 
     <header class="bg-gradient-to-r from-red-700 via-red-500 to-red-300 text-white py-16 px-6 shadow-md relative overflow-hidden">
         <div class="max-w-4xl mx-auto relative z-10 text-center">
-            <i data-lucide="graduation-cap" class="w-16 h-16 mx-auto mb-4 text-red-100"></i>
+            <img src="imagen.png" alt="Logo Universidad" class="mx-auto mb-6 max-h-32 object-contain rounded-xl shadow-lg bg-white/10 p-2 backdrop-blur-sm fallback-icon" onerror="this.style.display='none'; document.getElementById('icon-fallback').style.display='block';">
+            <i id="icon-fallback" data-lucide="graduation-cap" class="w-16 h-16 mx-auto mb-4 text-red-100" style="display: none;"></i>
+            
             <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-md">Volvemos a Construir Juntos</h1>
             <p class="text-xl md:text-2xl font-light text-red-50 max-w-2xl mx-auto drop-shadow-sm">Bienvenido/a de regreso a tu universidad. Tu bienestar es nuestra prioridad en este momento de recuperación.</p>
         </div>
@@ -31,90 +33,86 @@
             </div>
         </section>
 
-        <section class="bg-white rounded-3xl shadow-xl overflow-hidden" id="encuesta">
-            <div class="bg-red-900 text-white p-8">
-                <h2 class="text-3xl font-bold mb-2">Caracterización Socioacadémica y Emocional</h2>
-                <p class="text-red-100 text-lg">Tu respuesta nos permitirá diseñar estrategias para asegurar tu continuidad.</p>
+        <section>
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-red-900 mb-4">Gestión y Comprensión Emocional</h2>
+                <p class="text-lg text-stone-600">Te invitamos a hacer una pausa y reflexionar sobre estas preguntas orientadoras para identificar cómo te sientes hoy.</p>
             </div>
-
-            <form id="miFormulario" class="p-8 md:p-10 space-y-8">
-                
-                <div class="space-y-4">
-                    <h3 class="text-xl font-bold text-red-700 border-b border-red-100 pb-2 flex items-center gap-2">1. Datos Personales y Académicos</h3>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-semibold text-stone-700 mb-1">Nombre Completo</label>
-                            <input required type="text" class="w-full px-4 py-3 rounded-lg border border-stone-300 bg-stone-50" placeholder="Ej. María Pérez">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-stone-700 mb-1">Programa Académico</label>
-                            <input required type="text" class="w-full px-4 py-3 rounded-lg border border-stone-300 bg-stone-50" placeholder="Ej. Arquitectura">
-                        </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-red-100 shadow-sm">
+                    <div class="mb-4 bg-red-50 w-14 h-14 rounded-full flex items-center justify-center">
+                        <i data-lucide="heart-pulse" class="text-red-600 w-7 h-7"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-red-900 mb-3">Reconocimiento</h3>
+                    <p class="text-stone-700">¿Qué emociones has notado que predominan en ti (miedo, ansiedad, esperanza) al pensar en el regreso a clases?</p>
                 </div>
-
-                <div class="space-y-4">
-                    <h3 class="text-xl font-bold text-red-700 border-b border-red-100 pb-2 flex items-center gap-2">2. Acceso a Internet y Dispositivos</h3>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="space-y-3">
-                            <label class="block text-base font-semibold text-stone-700">¿Con qué dispositivos cuentas para tus clases?</label>
-                            <select required class="w-full px-4 py-3 rounded-lg border border-stone-300 bg-stone-50">
-                                <option value="">Selecciona una opción...</option>
-                                <option>Computador propio (Portátil o de Mesa)</option>
-                                <option>Computador compartido con familiares</option>
-                                <option>Tablet</option>
-                                <option>Únicamente teléfono celular</option>
-                                <option>No cuento con dispositivos</option>
-                            </select>
-                        </div>
-                        <div class="space-y-3">
-                            <label class="block text-base font-semibold text-stone-700">¿Cómo es tu acceso actual a internet?</label>
-                            <select required class="w-full px-4 py-3 rounded-lg border border-stone-300 bg-stone-50">
-                                <option value="">Selecciona una opción...</option>
-                                <option>Conexión estable (Banda ancha/Wifi en casa)</option>
-                                <option>Solo datos móviles (Limitado)</option>
-                                <option>Conexión intermitente</option>
-                                <option>No tengo acceso a internet</option>
-                            </select>
-                        </div>
+                <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-red-100 shadow-sm">
+                    <div class="mb-4 bg-red-50 w-14 h-14 rounded-full flex items-center justify-center">
+                        <i data-lucide="users" class="text-red-500 w-7 h-7"></i>
                     </div>
+                    <h3 class="text-xl font-bold text-red-900 mb-3">Red de Apoyo</h3>
+                    <p class="text-stone-700">¿Con qué personas, familiares o recursos de la universidad cuentas para hablar abiertamente de lo que sientes?</p>
                 </div>
-
-                <div class="space-y-4">
-                    <h3 class="text-xl font-bold text-red-700 border-b border-red-100 pb-2 flex items-center gap-2">3. Estado Emocional y Retorno a Clases</h3>
-                    <div class="space-y-3">
-                        <label class="block text-base font-semibold text-stone-700">¿Cómo te sientes frente a la posibilidad de volver a clases PRESENCIALES?</label>
-                        <select required class="w-full px-4 py-3 rounded-lg border border-stone-300 bg-stone-50">
-                            <option value="">Selecciona una opción...</option>
-                            <option>Me siento preparado/a y seguro/a</option>
-                            <option>Siento ansiedad, pero estoy dispuesto/a a intentarlo</option>
-                            <option>No me siento preparado/a emocionalmente</option>
-                            <option>No puedo por razones logísticas (movilidad, vivienda)</option>
-                        </select>
+                <div class="bg-white/60 backdrop-blur-sm rounded-xl p-6 border border-red-100 shadow-sm">
+                    <div class="mb-4 bg-red-50 w-14 h-14 rounded-full flex items-center justify-center">
+                        <i data-lucide="sun" class="text-red-400 w-7 h-7"></i>
                     </div>
-                    <div class="space-y-3">
-                        <label class="block text-base font-semibold text-stone-700">¿Condiciones emocionales actuales para enfrentar clases VIRTUALES?</label>
-                        <select required class="w-full px-4 py-3 rounded-lg border border-stone-300 bg-stone-50">
-                            <option value="">Selecciona una opción...</option>
-                            <option>Tranquilo/a, puedo concentrarme y estudiar</option>
-                            <option>Tengo dificultades de concentración</option>
-                            <option>Me siento abrumado/a, estresado/a o con mucha ansiedad</option>
-                        </select>
-                    </div>
+                    <h3 class="text-xl font-bold text-red-900 mb-3">Gestión</h3>
+                    <p class="text-stone-700">¿Qué pequeña acción diaria te ha ayudado a sentirte más seguro/a y en calma durante estos últimos días?</p>
                 </div>
-
-                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white text-xl font-bold py-4 rounded-xl shadow-lg mt-8 flex justify-center items-center gap-2">
-                    <i data-lucide="send" class="w-6 h-6"></i> Enviar Encuesta
-                </button>
-            </form>
-
-            <div id="mensajeExito" class="hidden p-12 text-center bg-red-50">
-                <i data-lucide="check-circle-2" class="w-20 h-20 text-green-500 mx-auto mb-6"></i>
-                <h3 class="text-3xl font-bold text-red-900 mb-4">¡Gracias por compartir tu situación!</h3>
-                <p class="text-lg text-stone-700 max-w-xl mx-auto">Tus respuestas han sido registradas. Nuestro equipo de bienestar está analizando los datos para brindarte apoyo. No estás solo/a en este proceso.</p>
-                <button onclick="location.reload()" class="mt-8 px-6 py-2 border-2 border-red-600 text-red-600 font-bold rounded-lg hover:bg-red-600 hover:text-white">Volver al formulario</button>
             </div>
         </section>
+
+        <section class="bg-white rounded-3xl shadow-xl overflow-hidden text-center border-t-8 border-red-600" id="encuesta">
+            <div class="p-10 md:p-14 space-y-6">
+                <i data-lucide="clipboard-list" class="w-20 h-20 text-red-600 mx-auto"></i>
+                <h2 class="text-3xl md:text-4xl font-bold text-stone-800">Encuesta de Caracterización</h2>
+                <p class="text-lg text-stone-600 max-w-2xl mx-auto pb-6">
+                    Tu respuesta es vital para nosotros. Por favor, diligencia el formulario oficial de la Universidad para conocer tu estado actual y poder brindarte el apoyo estructural y académico necesario.
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeaWcuRxtL-bziLcEIJrEzniNX1H0HBNvvhl5ZgoveOxVfdoA/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-3 bg-red-600 hover:bg-red-700 text-white text-xl font-bold py-5 px-10 rounded-full shadow-lg transition-all transform hover:-translate-y-1 w-full md:w-auto">
+                    Ir al Formulario Oficial
+                    <i data-lucide="external-link" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </section>
+
+        <section class="bg-red-50 rounded-2xl p-8 md:p-12 border border-red-200 shadow-inner">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-red-900 mb-4 flex items-center gap-3">
+                    <i data-lucide="leaf" class="text-green-600 w-8 h-8"></i>
+                    Ejercicio de Cierre: Resiliencia Activa
+                </h2>
+                <p class="text-lg text-stone-700 italic">
+                    “Para cerrar este espacio de hoy, les invito a hacer una pequeña pausa de un minuto. No necesitan cerrar los ojos si no se sienten cómodos; solo dejen caer su mirada en un punto fijo en el suelo frente a ustedes.”
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-red-800 mb-2">1. El anclaje físico</h3>
+                    <p class="text-stone-700 leading-relaxed">
+                        “Sientan el peso de sus cuerpos en la silla. Coloquen ambos pies completamente planos sobre el piso. Sientan el contacto firme de sus zapatos o sus pies con el suelo. Imaginen, al igual que el bambú de nuestra historia, que de las plantas de sus pies nacen raíces profundas que bajan y se aferran con total seguridad a la tierra. El suelo que nos sostiene es firme aquí y ahora”.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-red-800 mb-2">2. La respiración flexible</h3>
+                    <p class="text-stone-700 leading-relaxed">
+                        “Vamos a respirar juntos para flexibilizar la estructura. Inhalen profundamente por la nariz durante 4 segundos… sientan el aire entrar (1, 2, 3, 4). Sostengan el aire un momento (1, 2). Ahora, exhalen suavemente por la boca, como si soplaran una vela, durante 6 segundos… dejen ir toda la tensión acumulada (1, 2, 3, 4, 5, 6)”. <br><span class="text-sm text-stone-500 mt-2 block">(Repite este ciclo de respiración una vez más)</span>
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold text-red-800 mb-2">3. El compromiso en el presente</h3>
+                    <p class="text-stone-700 leading-relaxed">
+                        “Manteniendo esa respiración tranquila, repitan mentalmente este compromiso consigo mismos: <strong class="text-red-700">‘Acepto mis grietas, fortalezco mis raíces y elijo avanzar paso a paso’</strong>. Muevan lentamente los dedos de las manos, los dedos de los pies, y cuando estén listos, regresen su mirada aquí al frente”.
+                    </p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="bg-red-950 text-stone-300 py-16 px-6 mt-12 border-t-8 border-red-500 text-center">
@@ -123,15 +121,7 @@
     </footer>
 
     <script>
-        // Inicializar íconos
         lucide.createIcons();
-        
-        // Simular el envío del formulario
-        document.getElementById('miFormulario').addEventListener('submit', function(e) {
-            e.preventDefault(); // Evita que la página recargue
-            document.getElementById('miFormulario').classList.add('hidden');
-            document.getElementById('mensajeExito').classList.remove('hidden');
-        });
     </script>
 </body>
 </html>
