@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reencuentro Universitario - Colombia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-red-50 via-white to-red-100 font-sans text-stone-800">
+
+    <header class="bg-gradient-to-r from-red-700 via-red-500 to-red-300 text-white py-16 px-6 shadow-md relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <i data-lucide="graduation-cap" class="w-16 h-16 mx-auto mb-4 text-red-100"></i>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight drop-shadow-md">Volvemos a Construir Juntos</h1>
+            <p class="text-xl md:text-2xl font-light text-red-50 max-w-2xl mx-auto drop-shadow-sm">Bienvenido/a de regreso a tu universidad. Tu bienestar es nuestra prioridad en este momento de recuperación.</p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+        
+        <section class="bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm border-l-8 border-red-500 p-8 md:p-10">
+            <div class="flex items-center gap-3 mb-6">
+                <i data-lucide="map-pin" class="text-red-600 w-8 h-8"></i>
+                <h2 class="text-3xl font-bold text-red-900">Nuestro Contexto</h2>
+            </div>
+            <div class="space-y-4 text-lg leading-relaxed text-stone-700">
+                <p>Colombia, por su ubicación geográfica, es un país de gran riqueza natural pero también de alta vulnerabilidad sísmica. El reciente terremoto ha dejado profundas huellas en nuestra infraestructura, nuestra sociedad y en la cotidianidad de nuestras vidas.</p>
+                <p>Históricamente, eventos como los de Popayán (1983) o el Eje Cafetero (1999) nos han enseñado que la verdadera fuerza de nuestro país no reside en el cemento, sino en la <strong>solidaridad, la organización comunitaria y la resiliencia</strong> de su gente.</p>
+                <p>La educación no es ajena a esta crisis. Sin embargo, las aulas representan un refugio, un espacio de normalidad y el cimiento sobre el cual reconstruiremos nuestro futuro. Regresar a clases no es solo un acto académico, sino un paso valiente hacia la recuperación social.</p>
+            </div>
+        </section>
+
+        <section class="bg-white rounded-3xl shadow-xl overflow-hidden" id="encuesta">
+            <div class="bg-red-900 text-white p-8">
+                <h2 class="text-3xl font-bold mb-2">Caracterización Socioacadémica y Emocional</h2>
+                <p class="text-red-100 text-lg">Tu respuesta nos permitirá diseñar estrategias para asegurar tu continuidad.</p>
+            </div>
+
+            <form id="miFormulario" class="p-8 md:p-10 space-y-8">
+                
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-red-700 border-b border-red-100 pb-2 flex items-center gap-2">1. Datos Personales y Académicos</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-stone-700 mb-1">Nombre Completo</label>
+                            <input required type="text" class="w-full px-4 py-3 rounded-lg border border-stone-300 bg-stone-50" placeholder="Ej. María Pérez">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-stone-700 mb-1">Programa Académico</label>
+                            <input required type="text" class="w-full px-4 py-3 rounded-lg border border-stone-300 bg-stone-50" placeholder="Ej. Arquitectura">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-red-700 border-b border-red-100 pb-2 flex items-center gap-2">2. Acceso a Internet y Dispositivos</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <label class="block text-base font-semibold text-stone-700">¿Con qué dispositivos cuentas para tus clases?</label>
+                            <select required class="w-full px-4 py-3 rounded-lg border border-stone-300 bg-stone-50">
+                                <option value="">Selecciona una opción...</option>
+                                <option>Computador propio (Portátil o de Mesa)</option>
+                                <option>Computador compartido con familiares</option>
+                                <option>Tablet</option>
+                                <option>Únicamente teléfono celular</option>
+                                <option>No cuento con dispositivos</option>
+                            </select>
+                        </div>
+                        <div class="space-y-3">
+                            <label class="block text-base font-semibold text-stone-700">¿Cómo es tu acceso actual a internet?</label>
+                            <select required class="w-full px-4 py-3 rounded-lg border border-stone-300 bg-stone-50">
+                                <option value="">Selecciona una opción...</option>
+                                <option>Conexión estable (Banda ancha/Wifi en casa)</option>
+                                <option>Solo datos móviles (Limitado)</option>
+                                <option>Conexión intermitente</option>
+                                <option>No tengo acceso a internet</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-red-700 border-b border-red-100 pb-2 flex items-center gap-2">3. Estado Emocional y Retorno a Clases</h3>
+                    <div class="space-y-3">
+                        <label class="block text-base font-semibold text-stone-700">¿Cómo te sientes frente a la posibilidad de volver a clases PRESENCIALES?</label>
+                        <select required class="w-full px-4 py-3 rounded-lg border border-stone-300 bg-stone-50">
+                            <option value="">Selecciona una opción...</option>
+                            <option>Me siento preparado/a y seguro/a</option>
+                            <option>Siento ansiedad, pero estoy dispuesto/a a intentarlo</option>
+                            <option>No me siento preparado/a emocionalmente</option>
+                            <option>No puedo por razones logísticas (movilidad, vivienda)</option>
+                        </select>
+                    </div>
+                    <div class="space-y-3">
+                        <label class="block text-base font-semibold text-stone-700">¿Condiciones emocionales actuales para enfrentar clases VIRTUALES?</label>
+                        <select required class="w-full px-4 py-3 rounded-lg border border-stone-300 bg-stone-50">
+                            <option value="">Selecciona una opción...</option>
+                            <option>Tranquilo/a, puedo concentrarme y estudiar</option>
+                            <option>Tengo dificultades de concentración</option>
+                            <option>Me siento abrumado/a, estresado/a o con mucha ansiedad</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white text-xl font-bold py-4 rounded-xl shadow-lg mt-8 flex justify-center items-center gap-2">
+                    <i data-lucide="send" class="w-6 h-6"></i> Enviar Encuesta
+                </button>
+            </form>
+
+            <div id="mensajeExito" class="hidden p-12 text-center bg-red-50">
+                <i data-lucide="check-circle-2" class="w-20 h-20 text-green-500 mx-auto mb-6"></i>
+                <h3 class="text-3xl font-bold text-red-900 mb-4">¡Gracias por compartir tu situación!</h3>
+                <p class="text-lg text-stone-700 max-w-xl mx-auto">Tus respuestas han sido registradas. Nuestro equipo de bienestar está analizando los datos para brindarte apoyo. No estás solo/a en este proceso.</p>
+                <button onclick="location.reload()" class="mt-8 px-6 py-2 border-2 border-red-600 text-red-600 font-bold rounded-lg hover:bg-red-600 hover:text-white">Volver al formulario</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-red-950 text-stone-300 py-16 px-6 mt-12 border-t-8 border-red-500 text-center">
+        <h2 class="text-3xl md:text-4xl font-serif text-white italic">"Las grietas en las paredes no alcanzarán nuestros sueños."</h2>
+        <p class="text-xl font-light max-w-2xl mx-auto mt-4">Juntos por una educación resiliente en Colombia.</p>
+    </footer>
+
+    <script>
+        // Inicializar íconos
+        lucide.createIcons();
+        
+        // Simular el envío del formulario
+        document.getElementById('miFormulario').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que la página recargue
+            document.getElementById('miFormulario').classList.add('hidden');
+            document.getElementById('mensajeExito').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
