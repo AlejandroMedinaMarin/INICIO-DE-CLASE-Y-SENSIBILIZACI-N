@@ -25,7 +25,7 @@
         </div>
     </header>
 
-    <main class="max-w-3xl mx-auto px-6 py-8 w-full flex-grow flex items-center justify-center">
+    <main class="max-w-4xl mx-auto px-6 py-8 w-full flex-grow flex items-center justify-center">
         
         <div class="seccion-paso w-full text-center space-y-6 bg-white/90 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl border border-red-100">
             <div class="w-20 h-20 mx-auto bg-red-100 rounded-full flex items-center justify-center text-red-600 shadow-inner">
@@ -85,45 +85,24 @@
         </div>
 
         <div class="seccion-paso hidden w-full space-y-6 bg-white/95 backdrop-blur-sm p-6 md:p-10 rounded-3xl shadow-xl border-t-8 border-red-600">
-            <div class="text-center">
-                <div class="w-16 h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center text-red-600 shadow-inner mb-3">
-                    <i data-lucide="message-square-quote" class="w-8 h-8"></i>
+            <div class="text-center space-y-2">
+                <div class="w-14 h-14 mx-auto bg-red-100 rounded-full flex items-center justify-center text-red-600 shadow-inner">
+                    <i data-lucide="message-square-quote" class="w-7 h-7"></i>
                 </div>
                 <h2 class="text-2xl md:text-3xl font-bold text-stone-800">Co-creando nuestra clase</h2>
-                <p class="text-stone-600 text-sm mt-1">Comparte tus expectativas para este reencuentro en tiempo real.</p>
+                <p class="text-stone-600 text-sm">
+                    Participa desde tu dispositivo escribiendo lo que <strong>SÍ</strong> y lo que <strong>NO</strong> quieres ver en clase. ¡Se consolidará en tiempo real en pantalla!
+                </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-4">
-                <div class="bg-green-50 p-4 rounded-2xl border border-green-200 space-y-2">
-                    <label class="block font-bold text-green-900 text-sm flex items-center gap-1">
-                        <i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i> ¿Qué SÍ queremos ver en clase?
-                    </label>
-                    <input type="text" id="inputSi" placeholder="Ej. Escucha activa, flexibilidad..." class="w-full px-3 py-2 rounded-lg border border-green-300 text-sm outline-none bg-white">
-                    <button onclick="agregarAporte('si')" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded-lg text-sm transition-all shadow-sm">Agregar</button>
-                </div>
-
-                <div class="bg-red-50 p-4 rounded-2xl border border-red-200 space-y-2">
-                    <label class="block font-bold text-red-900 text-sm flex items-center gap-1">
-                        <i data-lucide="x-circle" class="w-4 h-4 text-red-600"></i> ¿Qué NO queremos ver en clase?
-                    </label>
-                    <input type="text" id="inputNo" placeholder="Ej. Exceso de presión, afán..." class="w-full px-3 py-2 rounded-lg border border-red-300 text-sm outline-none bg-white">
-                    <button onclick="agregarAporte('no')" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 rounded-lg text-sm transition-all shadow-sm">Agregar</button>
-                </div>
+            <div class="w-full h-[450px] rounded-2xl border-2 border-red-200 overflow-hidden shadow-inner bg-stone-50">
+                <iframe src="https://padlet.com/embed/medinaalejandro2/co-creando-nuestra-clase-s0233h280jnhc4kq5pep" frameborder="0" allow="camera;microphone;geolocation" style="width: 100%; height: 100%; display: block; background-color: transparent;"></iframe>
             </div>
-
-            <div class="grid md:grid-cols-2 gap-4 pt-2">
-                <div class="bg-white p-4 rounded-xl border border-stone-200 max-h-40 overflow-y-auto shadow-inner">
-                    <h3 class="font-bold text-green-800 text-xs uppercase tracking-wider mb-2">Aportes: Lo que SÍ queremos</h3>
-                    <ul id="listaSi" class="space-y-1 text-sm text-stone-700">
-                        <li class="italic text-stone-400 text-xs">Aún no hay aportes...</li>
-                    </ul>
-                </div>
-                <div class="bg-white p-4 rounded-xl border border-stone-200 max-h-40 overflow-y-auto shadow-inner">
-                    <h3 class="font-bold text-red-800 text-xs uppercase tracking-wider mb-2">Aportes: Lo que NO queremos</h3>
-                    <ul id="listaNo" class="space-y-1 text-sm text-stone-700">
-                        <li class="italic text-stone-400 text-xs">Aún no hay aportes...</li>
-                    </ul>
-                </div>
+            
+            <div class="text-center">
+                <a href="https://padlet.com/medinaalejandro2/co-creando-nuestra-clase-s0233h280jnhc4kq5pep" target="_blank" class="inline-flex items-center gap-2 text-xs text-red-700 hover:underline font-semibold">
+                    ¿Problemas para visualizarlo aquí? Abrir tablero en pantalla completa <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                </a>
             </div>
         </div>
 
@@ -167,7 +146,7 @@
     </main>
 
     <nav class="bg-white border-t border-red-100 py-4 px-6 shadow-lg">
-        <div class="max-w-3xl mx-auto flex justify-between items-center">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
             <button id="btnAnterior" onclick="cambiarPaso(-1)" class="flex items-center gap-2 bg-stone-200 hover:bg-stone-300 text-stone-800 font-bold py-3 px-6 rounded-full transition-all disabled:opacity-30 disabled:cursor-not-allowed">
                 <i data-lucide="arrow-left" class="w-5 h-5"></i> Anterior
             </button>
@@ -216,27 +195,6 @@
             }
             actualizarVista();
             window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Lógica del momento interactivo en tiempo real
-        function agregarAporte(tipo) {
-            const input = document.getElementById(tipo === 'si' ? 'inputSi' : 'inputNo');
-            const lista = document.getElementById(tipo === 'si' ? 'listaSi' : 'listaNo');
-            const texto = input.value.trim();
-
-            if (texto === '') return;
-
-            // Si es el primer elemento válido, quitamos el mensaje de "Aún no hay aportes"
-            if (lista.querySelector('.italic')) {
-                lista.innerHTML = '';
-            }
-
-            const li = document.createElement('li');
-            li.className = "bg-stone-50 px-3 py-1.5 rounded-lg border border-stone-100 flex items-center justify-between animate-fade-in";
-            li.innerHTML = `<span>• ${texto}</span>`;
-            
-            lista.appendChild(li);
-            input.value = '';
         }
 
         // Inicializar
